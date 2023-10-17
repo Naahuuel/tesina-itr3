@@ -134,17 +134,6 @@
 						<div class="container-img">
 							<img src="img/cafe-irish.jpg" alt="Cafe Irish" />
 							<span class="discount">-13%</span>
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
 						</div>
 						<div class="content-card-product">
 							<div class="stars">
@@ -158,7 +147,7 @@
 							<span class="add-cart">
 								<i class="fa-solid fa-basket-shopping"></i>
 							</span>
-							<p class="price">$4.60 <span>$5.30</span></p>
+							<p class="price">$1500 <span>$2000</span></p>
 						</div>
 					</div>
 					<!-- Producto 2 -->
@@ -168,18 +157,7 @@
 								src="img/cafe-ingles.jpg"
 								alt="Cafe incafe-ingles.jpg"
 							/>
-							<span class="discount">-22%</span>
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
+							<span class="discount">-22%</span>							
 						</div>
 						<div class="content-card-product">
 							<div class="stars">
@@ -193,7 +171,7 @@
 							<span class="add-cart">
 								<i class="fa-solid fa-basket-shopping"></i>
 							</span>
-							<p class="price">$5.70 <span>$7.30</span></p>
+							<p class="price">$1650 <span>$2250</span></p>
 						</div>
 					</div>
 					<!--  -->
@@ -203,17 +181,7 @@
 								src="img/cafe-australiano.jpg"
 								alt="Cafe Australiano"
 							/>
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
+							
 						</div>
 						<div class="content-card-product">
 							<div class="stars">
@@ -227,24 +195,14 @@
 							<span class="add-cart">
 								<i class="fa-solid fa-basket-shopping"></i>
 							</span>
-							<p class="price">$3.20</p>
+							<p class="price">$1200</p>
 						</div>
 					</div>
 					<!--  -->
 					<div class="card-product">
 						<div class="container-img">
 							<img src="img/cafe-helado.jpg" alt="Cafe Helado" />
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
+						
 						</div>
 						<div class="content-card-product">
 							<div class="stars">
@@ -258,7 +216,7 @@
 							<span class="add-cart">
 								<i class="fa-solid fa-basket-shopping"></i>
 							</span>
-							<p class="price">$5.60</p>
+							<p class="price">$2500</p>
 						</div>
 					</div>
 				</div>
@@ -297,17 +255,7 @@
 						<div class="container-img">
 							<img src="img/cafe-irish.jpg" alt="Cafe Irish" />
 							<span class="discount">-13%</span>
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
+							
 						</div>
 						<div class="content-card-product">
 							<div class="stars">
@@ -321,7 +269,7 @@
 							<span class="add-cart">
 								<i class="fa-solid fa-basket-shopping"></i>
 							</span>
-							<p class="price">$4.60 <span>$5.30</span></p>
+							<p class="price">$1430 <span>$1580</span></p>
 						</div>
 					</div>
 					<!-- Producto 2 -->
@@ -332,17 +280,7 @@
 								alt="Cafe incafe-ingles.jpg"
 							/>
 							<span class="discount">-22%</span>
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
+							
 						</div>
 						<div class="content-card-product">
 							<div class="stars">
@@ -356,7 +294,7 @@
 							<span class="add-cart">
 								<i class="fa-solid fa-basket-shopping"></i>
 							</span>
-							<p class="price">$5.70 <span>$7.30</span></p>
+							<p class="price">$1400<span>$1950</span></p>
 						</div>
 					</div>
 					<!--  -->
@@ -364,17 +302,7 @@
 						<div class="container-img">
 							<img src="img/cafe-viena.jpg" alt="Cafe Viena" />
 							<span class="discount">-30%</span>
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
+							
 						</div>
 						<div class="content-card-product">
 							<div class="stars">
@@ -388,24 +316,14 @@
 							<span class="add-cart">
 								<i class="fa-solid fa-basket-shopping"></i>
 							</span>
-							<p class="price">$3.85 <span>$5.50</span></p>
+							<p class="price">$1150 <span>$1500</span></p>
 						</div>
 					</div>
 					<!--  -->
 					<div class="card-product">
 						<div class="container-img">
 							<img src="img/cafe-liqueurs.jpg" alt="Cafe Liqueurs" />
-							<div class="button-group">
-								<span>
-									<i class="fa-regular fa-eye"></i>
-								</span>
-								<span>
-									<i class="fa-regular fa-heart"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-code-compare"></i>
-								</span>
-							</div>
+							
 						</div>
 						<div class="content-card-product">
 							<div class="stars">
@@ -419,7 +337,7 @@
 							<span class="add-cart">
 								<i class="fa-solid fa-basket-shopping"></i>
 							</span>
-							<p class="price">$5.60</p>
+							<p class="price">$1855</p>
 						</div>
 					</div>
 				</div>
@@ -432,14 +350,7 @@
 					<div class="card-blog">
 						<div class="container-img">
 							<img src="img/blog-1.jpg" alt="Imagen Blog 1" />
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-							</div>
+							
 						</div>
 						<div class="content-blog">
 							<h3>Lorem, ipsum dolor sit</h3>
@@ -458,14 +369,7 @@
 					<div class="card-blog">
 						<div class="container-img">
 							<img src="img/blog-2.jpg" alt="Imagen Blog 2" />
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-						</div>
+							
 					</div>
 
 					<div class="content-blog">
@@ -484,14 +388,7 @@
 					<div class="card-blog">
 						<div class="container-img">
 							<img src="img/blog-3.jpg" alt="Imagen Blog 3" />
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-							</div>
+							
 						</div>
 						<div class="content-blog">
 							<h3>Lorem, ipsum dolor sit</h3>
@@ -518,14 +415,7 @@
 					<div class="card-blog">
 						<div class="container-img">
 							<img src="img/blog-1.jpg" alt="Imagen Blog 1" />
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-							</div>
+							
 						</div>
 						<div class="content-blog">
 							<h3>Lorem, ipsum dolor sit</h3>
@@ -544,14 +434,7 @@
 					<div class="card-blog">
 						<div class="container-img">
 							<img src="img/blog-2.jpg" alt="Imagen Blog 2" />
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-						</div>
+							
 					</div>
 		
 					<div class="content-blog">
@@ -570,14 +453,7 @@
 					<div class="card-blog">
 						<div class="container-img">
 							<img src="img/blog-3.jpg" alt="Imagen Blog 3" />
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-							</div>
+							
 						</div>
 						<div class="content-blog">
 							<h3>Lorem, ipsum dolor sit</h3>
@@ -607,7 +483,7 @@
 							</li>
 							<li>Teléfono: +54 9 3571 51-6436</li>
 							
-							<li>EmaiL: FastFood@support.com</li>
+							<li>EmaiL: ComidaRapida@support.com</li>
 						</ul>
 						<div class="social-icons">
 							<span class="facebook">
@@ -631,7 +507,7 @@
 					<div class="information">
 						<p class="title-footer">Información</p>
 						<ul>
-							<li><a href="#">Acerca de Nosotros</a></li>
+							<li><a href="#sobrenosotros">Sobre Nosotros</a></li>
 							<li><a href="#">Información Delivery</a></li>
 							<li><a href="<?= site_url('politica')?>">Politicas de Privacidad</a></li>
 							<li><a href="#">Términos y condiciones</a></li>

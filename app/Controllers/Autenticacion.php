@@ -25,14 +25,14 @@ class Autenticacion extends BaseController
     public function guardar()
     {
         $validation = $this->validate([
-            'fullname' =>[
+            'nombre_completo' =>[
                 'rules' =>'required',
                 'errors' =>[
                     'required' =>'Su Nombre completo es requerido'
                 ]
                 ],
         
-            'lastname' =>[
+            'apellido' =>[
                 'rules' =>'required',
                 'errors' =>[
                     'required' =>'Su Apellido es requerido'
@@ -46,7 +46,7 @@ class Autenticacion extends BaseController
                     'is_unique' =>'Correo electrónico ya está registrado'
                 ]
                 ],
-            'password' =>[
+            'contraseña' =>[
                 'rules' =>'required|min_length[5]|max_length[12]',
                 'errors' =>[
                     'required' =>'Se requiere Contraseña',
@@ -61,16 +61,16 @@ class Autenticacion extends BaseController
             return view('autenticacion/register', ['validation' => $this->validator]);
         } else {
             // Registro del uso en db
-            $full_name = $this->request->getPost('fullname');
-            $last_name = $this->request->getPost('lastname');
+            $nombre_completo = $this->request->getPost('nombre_completo');
+            $apellido = $this->request->getPost('apellido');
             $email = $this->request->getPost('email');
-            $password = $this->request->getPost('password');
+            $contraseña = $this->request->getPost('contraseña');
 
             $values = [
-                'full_name' => $full_name,
-                'last_name' => $last_name,
+                'nombre_completo' => $nombre_completo,
+                'apellido' => $apellido,
                 'email' => $email,
-                'password' =>Hash::make($password),
+                'contraseña' =>Hash::make($contraseña),
             ];
 
             $userModel = new \App\Models\UserModel();
@@ -98,7 +98,7 @@ class Autenticacion extends BaseController
                     'is_not_unique' => 'Este Correo Electrónico no está registrado en nuestro servicio.'
                 ]
             ],
-            'password' => [
+            'contraseña' => [
                 'rules' => 'required|min_length[5]|max_length[12]',
                 'errors' => [
                     'required' => 'Se requiere Contraseña',
@@ -113,7 +113,7 @@ class Autenticacion extends BaseController
         } else {
             // Revisar el usuario
             $email = $this->request->getPost('email');
-            $password = $this->request->getPost('password');
+            $contraseña = $this->request->getPost('contraseña');
             $userModel = new \App\Models\UserModel();
             $user_info = $userModel->where('email', $email)->first();
 
@@ -122,7 +122,7 @@ class Autenticacion extends BaseController
                 return redirect()->to('/autenticacion')->withInput();
             }
 
-            $check_password = Hash::check($password, $user_info['password']);
+            $check_password = Hash::check($contraseña, $user_info['contraseña']);
 
             if (!$check_password) {
                 session()->setFlashdata('fail', 'Contraseña Incorrecta');

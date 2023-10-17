@@ -27,7 +27,7 @@
 
         <div>
           <h3>Soporte de Ayuda</h3>
-          <p>FastFood@gmail.com</p>
+          <p>ComidaRapida@support.com</p>
         </div>
 
         <div>

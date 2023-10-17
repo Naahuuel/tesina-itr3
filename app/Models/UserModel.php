@@ -7,8 +7,8 @@ use CodeIgniter\Model;
 class UserModel extends Model
 {
     protected $table = 'usuario';
-    protected $primaryKey = 'id_users';
-    protected $allowedFields = ['full_name', 'last_name', 'email', 'password'];
+    protected $primaryKey = 'id_usuarios';
+    protected $allowedFields = ['nombre_completo', 'apellido', 'email', 'contraseña'];
 }
 
 ?>

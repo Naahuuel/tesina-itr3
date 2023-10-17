@@ -32,14 +32,14 @@
                   <?php endif ?>
                   <div class="form-group">
                     <label for="">Nombre Completo</label>
-                    <input type="text" class="form-control my-1 py-2" name="fullname" placeholder="Ingrese su Nombre Completo" value="<?= set_value('fullname'); ?>">
-                    <span class="text-danger"><?= isset($validation) ? $validation->getError('fullname') : '' ?></span>      
+                    <input type="text" class="form-control my-1 py-2" name="nombre_completo" placeholder="Ingrese su Nombre Completo" value="<?= set_value('nombre_completo'); ?>">
+                    <span class="text-danger"><?= isset($validation) ? $validation->getError('nombre_completo') : '' ?></span>      
                   </div>
 
                   <div class="form-group">
                     <label for="">Apellido</label>
-                    <input type="text" class="form-control my-1 py-2" name="lastname" placeholder="Ingrese su Apellido" value="<?= set_value('lastname'); ?>">
-                    <span class="text-danger"><?= isset($validation) ? $validation->getError('lastname') : '' ?></span>      
+                    <input type="text" class="form-control my-1 py-2" name="apellido" placeholder="Ingrese su Apellido" value="<?= set_value('apellido'); ?>">
+                    <span class="text-danger"><?= isset($validation) ? $validation->getError('apellido') : '' ?></span>      
 
                   </div>
 
@@ -52,8 +52,8 @@
 
                   <div class="form-group">
                     <label for="">Contraseña</label>
-                    <input type="password" class="form-control my-1 py-2" name="password" placeholder="Ingrese una Contraseña" value="<?= set_value('password'); ?>">
-                    <span class="text-danger"><?= isset($validation) ? $validation->getError('password') : '' ?></span>      
+                    <input type="contraseña" class="form-control my-1 py-2" name="contraseña" placeholder="Ingrese una Contraseña" value="<?= set_value('contraseña'); ?>">
+                    <span class="text-danger"><?= isset($validation) ? $validation->getError('contraseña') : '' ?></span>      
                   </div>
 
                   <div class="form-group">

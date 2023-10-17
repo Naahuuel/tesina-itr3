@@ -52,7 +52,7 @@
                             </span>
                             <input type="password" class="form-control" name="password" placeholder="Ingrese su Contraseña" aria-label="Input group example" aria-describedy="basic-addon1" value="<?= set_value('password'); ?>">
                         </div>
-                        <span class="text-danger"><?= isset($validation) ? $validation->getError('password') : '' ?></span>
+                        <span class="text-danger"><?= isset($validation) ? $validation->getError('contraseña') : '' ?></span>
                       </div>
 
                       <div class="mt-2">
