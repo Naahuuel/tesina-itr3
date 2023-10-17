@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 namespace App\Controllers;
 
@@ -37,48 +37,48 @@ class ReservasController extends Controller
         return view('reservas/disponibilidad', $data);
     }
 
-    // public function getMesasDisponibles()
-    // {
-    //     // Realiza una consulta SQL para obtener las mesas disponibles desde la tabla 'mesas'
-    //     $query = $this->db->table('mesas');
-    //     $query->where('disponible', 1); // Suponiendo que 'disponible' indica si una mesa está disponible
-    //     $query->where('restaurante_id', $idDelRestaurante); // Agrega esta línea para filtrar por restaurante si es necesario
-    //     $query->limit(20); // Limita el resultado a un máximo de 20 mesas
-    //     $result = $query->get()->getResultArray();
-    // }
+    public function getMesasDisponibles()
+    {
+        // Realiza una consulta SQL para obtener las mesas disponibles desde la tabla 'mesas'
+        $query = $this->db->table('mesas');
+        $query->where('disponible', 1); // Suponiendo que 'disponible' indica si una mesa está disponible
+        $query->where('restaurante_id', $idDelRestaurante); // Agrega esta línea para filtrar por restaurante si es necesario
+        $query->limit(20); // Limita el resultado a un máximo de 20 mesas
+        $result = $query->get()->getResultArray();
+    }
 
-    // public function getDiasDisponibles()
-    // {
-    //     $query = $this->db->table('dias_disponibles');
-    //     $query->where('disponible', 1); // Suponiendo que 'disponible' indica si un día está disponible
-    //     $result = $query->get()->getResultArray();
+    public function getDiasDisponibles()
+    {
+        $query = $this->db->table('dias_disponibles');
+        $query->where('disponible', 1); // Suponiendo que 'disponible' indica si un día está disponible
+        $result = $query->get()->getResultArray();
     
-    //     return $result;
-    // }
+        return $result;
+    }
 
-    // public function getHorasDisponibles()
-    // {
-    //     $query = $this->db->table('horas_disponibles');
-    //     $query->where('disponible', 1); // Suponiendo que 'disponible' indica si una hora está disponible
-    //     $result = $query->get()->getResultArray();
+    public function getHorasDisponibles()
+    {
+        $query = $this->db->table('horas_disponibles');
+        $query->where('disponible', 1); // Suponiendo que 'disponible' indica si una hora está disponible
+        $result = $query->get()->getResultArray();
     
-    //     return $result;
-    // }
+        return $result;
+    }
 
-    // public function actualizarDisponibilidad($tabla, $id)
-    // {
-    //         // Actualiza la disponibilidad de la tabla específica en la base de datos
-    //     if ($tabla === 'mesas') {
-    //         // Supongamos que 'mesas' es el nombre de la tabla de mesas
-    //         $this->db->table('mesas')->where('id', $id)->update(['disponible' => 0]);
-    //     } elseif ($tabla === 'dias_disponibles') {
-    //         // Supongamos que 'dias_disponibles' es el nombre de la tabla de días disponibles
-    //         $this->db->table('dias_disponibles')->where('id', $id)->update(['disponible' => 0]);
-    //     } elseif ($tabla === 'horas_disponibles') {
-    //         // Supongamos que 'horas_disponibles' es el nombre de la tabla de horas disponibles
-    //         $this->db->table('horas_disponibles')->where('id', $id)->update(['disponible' => 0]);
-    //     }
-    // }
+    public function actualizarDisponibilidad($tabla, $id)
+    {
+            // Actualiza la disponibilidad de la tabla específica en la base de datos
+        if ($tabla === 'mesas') {
+            // Supongamos que 'mesas' es el nombre de la tabla de mesas
+            $this->db->table('mesas')->where('id', $id)->update(['disponible' => 0]);
+        } elseif ($tabla === 'dias_disponibles') {
+            // Supongamos que 'dias_disponibles' es el nombre de la tabla de días disponibles
+            $this->db->table('dias_disponibles')->where('id', $id)->update(['disponible' => 0]);
+        } elseif ($tabla === 'horas_disponibles') {
+            // Supongamos que 'horas_disponibles' es el nombre de la tabla de horas disponibles
+            $this->db->table('horas_disponibles')->where('id', $id)->update(['disponible' => 0]);
+        }
+    }
 
     public function reservar()
     {
@@ -124,10 +124,10 @@ class ReservasController extends Controller
         ]);
 
 
-        // // Actualiza la disponibilidad de mesas, días y horas
-        // $this->actualizarDisponibilidad('mesas', $mesaSeleccionada);
-        // $this->actualizarDisponibilidad('dias_disponibles', $diaSeleccionado);
-        // $this->actualizarDisponibilidad('horas_disponibles', $horaSeleccionada);
+        // Actualiza la disponibilidad de mesas, días y horas
+        $this->actualizarDisponibilidad('mesas', $mesaSeleccionada);
+        $this->actualizarDisponibilidad('dias_disponibles', $diaSeleccionado);
+        $this->actualizarDisponibilidad('horas_disponibles', $horaSeleccionada);
 
         // Redirige a una página de confirmación
         return redirect()->to('confirmacion');
@@ -151,4 +151,4 @@ class ReservasController extends Controller
     }
 
 }
-
+ -->

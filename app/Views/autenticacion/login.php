@@ -22,7 +22,7 @@
                 </svg>
                   <h4 class="mx-auto d-block">Login</h4><hr>
 
-                  <form action="<?= base_url('auth/check'); ?>" method="post">
+                  <form action="<?= base_url('autenticacion/controlar'); ?>" method="post">
                       <?= csrf_field(); ?>
                       <?php if(!empty(session()->getFlashdata('fail'))) : ?>
                       <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
@@ -59,7 +59,7 @@
                         <button class="btn btn-primary">Login</button>
                       </div>
 
-                      <a href="<?= site_url('auth/register'); ?>" class="nav-link py-2">¿No tienes una cuenta? Aquí</a>
+                      <a href="<?= site_url('autenticacion/register'); ?>" class="nav-link py-2">¿No tienes una cuenta? Aquí</a>
                       <a href="<?= site_url(''); ?>" class="nav-link py-1 d-block">Inicio</a>
                 </form>
               </div>

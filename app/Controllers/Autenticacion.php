@@ -5,7 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Libraries\Hash;
 
-class Auth extends BaseController
+class Autenticacion extends BaseController
 {
     public function __construct()
     {
@@ -14,15 +14,15 @@ class Auth extends BaseController
 
     public function index()
     {
-        return view('auth/login');
+        return view('autenticacion/login');
     }
 
     public function register()
     {
-        return view('auth/register');
+        return view('autenticacion/register');
     } 
 
-    public function save()
+    public function guardar()
     {
         $validation = $this->validate([
             'fullname' =>[
@@ -39,7 +39,7 @@ class Auth extends BaseController
                 ]
                 ],
             'email' =>[
-                'rules' =>'required|valid_email|is_unique[user.email]',
+                'rules' =>'required|valid_email|is_unique[usuario.email]',
                 'errors' =>[
                     'required' =>'Correo electrónico es requerido',
                     'valid_email' =>'Debe ingresar un correo electrónico válido, por ejemplo:@gmail.com',
@@ -58,7 +58,7 @@ class Auth extends BaseController
     
         if (!$validation) 
         {
-            return view('auth/register', ['validation' => $this->validator]);
+            return view('autenticacion/register', ['validation' => $this->validator]);
         } else {
             // Registro del uso en db
             $full_name = $this->request->getPost('fullname');
@@ -81,17 +81,17 @@ class Auth extends BaseController
                 return redirect()->to('register')->with('success', '¡Ahora estás registrado/a con éxito!');
                 $last_id = $userModel->insertID();
                 session()->set('loggedUser', $last_id);
-                return redirect()->to('dashboard');
+                return redirect()->to('admin');
             }
         }
     }
 
-    public function check()
+    public function controlar()
     {
         // Validación del Usuario
         $validation = $this->validate([
             'email' => [
-                'rules' => 'required|valid_email|is_not_unique[user.email]',
+                'rules' => 'required|valid_email|is_not_unique[usuario.email]',
                 'errors' => [
                     'required' => 'Correo electrónico es requerido',
                     'valid_email' => 'Introduzca una dirección de Correo Electrónico válida',
@@ -109,7 +109,7 @@ class Auth extends BaseController
         ]);
 
         if (!$validation) {
-            return view('auth/login', ['validation' => $this->validator]);
+            return view('autenticacion/login', ['validation' => $this->validator]);
         } else {
             // Revisar el usuario
             $email = $this->request->getPost('email');
@@ -119,14 +119,14 @@ class Auth extends BaseController
 
             if (!$user_info) {
                 session()->setFlashdata('fail', 'El Correo electrónico no encontrado.');
-                return redirect()->to('/auth')->withInput();
+                return redirect()->to('/autenticacion')->withInput();
             }
 
             $check_password = Hash::check($password, $user_info['password']);
 
             if (!$check_password) {
                 session()->setFlashdata('fail', 'Contraseña Incorrecta');
-                return redirect()->to('/auth')->withInput();
+                return redirect()->to('/autenticacion')->withInput();
             } else {
                 $user_id = $user_info['id_users'];
                 session()->set('loggedUser', $user_id);
@@ -135,7 +135,7 @@ class Auth extends BaseController
                 $adminEmails = ['nahuelalvarez@gmail.com', 'benjaoviedo@gmail.com'];
 
                 if (in_array($email, $adminEmails)) {
-                    return redirect()->to('/dashboard');
+                    return redirect()->to('/admin');
                 } else {
                     return redirect()->to('/inicio');
                 }
@@ -146,7 +146,7 @@ class Auth extends BaseController
     function Input(){
         if(session()->has('loggedUser')){
             session()->remove('loggedUser');
-            return redirect()->to('/auth?acceso=fuera')->with('fail','¡Estás deslogeado!');
+            return redirect()->to('/autenticacion?acceso=fuera')->with('fail','¡Estás deslogeado!');
         }
     }
 }

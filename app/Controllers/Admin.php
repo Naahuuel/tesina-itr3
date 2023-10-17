@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Dashboard extends BaseController
+class Admin extends BaseController
 {
     public function index()
     {
@@ -10,11 +10,11 @@ class Dashboard extends BaseController
         $loggedUserID = session()->get('loggedUser');
         $userInfo = $userModel->find($loggedUserID); 
         $data = [
-            'title' =>'Dashboard',
+            'title' =>'Admin',
             'userInfo' =>$userInfo
         ];
 
-        return view('dashboard/index', $data);
+        return view('Admin/index', $data);
     }
 
     function profile(){
@@ -26,7 +26,7 @@ class Dashboard extends BaseController
             'userInfo' =>$userInfo
         ];
         
-        return view('dashboard/profile', $data);
+        return view('Admin/profile', $data);
 
     }
 }

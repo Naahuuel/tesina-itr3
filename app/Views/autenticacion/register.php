@@ -21,7 +21,7 @@
                   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                 </svg>
                 <h4>Register</h4><hr>
-                <form action="<?= base_url('auth/save'); ?>" method="post" autcomplete="off">
+                <form action="<?= base_url('autenticacion/guardar'); ?>" method="post" autcomplete="off">
                   <?= csrf_field(); ?>
                   <?php if(!empty(session()->getFlashdata('fail'))) : ?>
                     <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
@@ -60,7 +60,7 @@
                     <button class="btn btn-primary btn-block" type="submit" class="form-control ">Register</button>
                   </div>
 
-                  <a href="<?= site_url('auth/login'); ?>" class="nav-link py-1">Ya tengo cuenta, inicia sesión ahora</a>
+                  <a href="<?= site_url('autenticacion/login'); ?>" class="nav-link py-1">Ya tengo cuenta, inicia sesión ahora</a>
                   <a href="<?= site_url(''); ?>" class="nav-link py-1">Inicio</a>
                 </form>
               </div>

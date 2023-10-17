@@ -44,27 +44,28 @@ $routes->get('/confirmacion', 'ReservasController::confirmacion');
 $routes->post('/reservas', 'ReservasController::reservar');
 
 // Login y Register
-$routes->get('/auth/login', 'Auth::index');
-$routes->get('/auth/register', 'Auth::register');
-$routes->post('auth/save', 'Auth::save');
-$routes->get('/register', 'Auth::register');
-$routes->post('/auth/check', 'Auth::check');
-$routes->get('/auth', 'Auth::check');
-$routes->get('/dashboard', 'Dashboard::index');
-$routes->get('/auth/logout', 'Auth::Input');
+$routes->get('/autenticacion/login', 'Autenticacion::index');
+$routes->get('/autenticacion/register', 'Autenticacion::register');
+
+$routes->post('/autenticacion/guardar', 'Autenticacion::guardar');
+$routes->get('/register', 'Autenticacion::register');
+$routes->post('/autenticacion/controlar', 'Autenticacion::controlar');
+$routes->get('/autenticacion', 'Autenticacion::controlar');
+$routes->get('/admin', 'Admin::index');
+$routes->get('/autenticacion/logout', 'Autenticacion::Input');
 $routes->get('/inicio', 'Home::index');
-$routes->get('/login', 'Auth::index');  
-$routes->get('/dashboard/profile', 'Dashboard::profile');
+$routes->get('/login', 'Autenticacion::index');  
+$routes->get('/admin/profile', 'Admin::profile');
 
 // Renderiza a la vista 
 $routes->group('', ['Filters' => 'AuthCheckFilter'], function ($routes) {
-    $routes->get('/dashboard', 'Dashboard::index');
-    $routes->get('/dashboard/profile', 'Dashboard::profile');
+    $routes->get('/admin', 'Admin::index');
+    $routes->get('/admin/profile', 'Admin::profile');
     
     
     $routes->group('', ['Filters' => 'AlreadyLoggedFilter'], function ($routes) {
-        $routes->get('/auth/login', 'Auth::index');
-        $routes->get('/auth/register', 'Auth::index');
+        $routes->get('/autenticacion/login', 'Autenticacion::index');
+        $routes->get('/autenticacion/register', 'Autenticacion::index');
     });
 
 });

@@ -7,7 +7,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
-		<title>Comida Rápida</title>
+		<title>Inicio</title>
 		<link rel="stylesheet" href="<?= base_url('css-pagina/inicio.css'); ?>">
 		<link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>">
 		<link rel="shortcut icon" href="img/tasita.png">
@@ -53,8 +53,8 @@
 					</ul>
 				
 					<ul class="menu">
-					<h1 class="logo black"><a href="<?= site_url('auth/login'); ?>">Login</a></h1>
-					<h1 class="logo black"><a href="<?= site_url('auth/register'); ?>">Register</a></h1>
+					<h1 class="logo black"><a href="<?= site_url('autenticacion/login'); ?>">Login</a></h1>
+					<h1 class="logo black"><a href="<?= site_url('autenticacion/register'); ?>">Register</a></h1>
 					</ul>
 			</div>
 		</header>

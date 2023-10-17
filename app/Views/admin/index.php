@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title; ?></title>
     <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css'); ?>">
+    <link rel="shortcut icon" href="../img/tasita.png">
+
 </head>
 <body>
     <div class="container">
@@ -20,11 +22,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><?= ucfirst($userInfo['full_name']); ?></td>
-                        <td><?= $userInfo['email'] ?></td>
-                        <td><a href="<?= site_url('auth/logout'); ?>">Logout</a></td>
-                        <td><a href="<?= site_url('inicio'); ?>">Inicio</a></td>
+                <tr>
+                    <td><?= isset($userInfo['full_name']) ? ucfirst($userInfo['full_name']) : ''; ?></td>
+                    <td><?= isset($userInfo['email']) ? $userInfo['email'] : ''; ?></td>
+                    <td><a href="<?= site_url('autenticacion/logout'); ?>">Logout</a></td>
+                    <td><a href="<?= site_url('inicio'); ?>">Inicio</a></td>
+                </tr>
                 </tbody> 
             </table>
             </div>
